@@ -1,16 +1,8 @@
-import streamlit as st
-from groq import Groq
-
-st.set_page_config("pragyanAI Content Generator", layout="wide")
-st.title("pragyan_AI - Content Generator")
-st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNDZkYgLrJIQ3CzrHJrMSJMForq0CfWfQQez9nquOtQMY4l8idWhNzUZYT59ojIbLwM9d3yjoYITzxBQV3_dAxSK5CAbAMLoj4XuKmbXg&s=10")
- #Get GROQ API Key
+# Get GROQ API Key
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
-
 # Get Product Name and Audience for That Product
 product = st.text_input("Product")
 audience = st.text_input("Audience")
-
 # Button to Generate Content
 if st.button("Generate Content"):
     prompt = f"Write marketing content for {product} targeting {audience}."
@@ -21,7 +13,6 @@ if st.button("Generate Content"):
     st.session_state.text = response.choices[0].message.content
     text =response.choices[0].message.content
     st.write(text)
-
 # After Content Create - Download The File
 if "text" in st.session_state:
     content = st.text_area("Generated Content", st.session_state.text, height=300)
