@@ -3,7 +3,7 @@ from groq import Groq
 
 st.set_page_config("pragyanAI Content Generator", layout="wide")
 st.title("pragyan_AI - Content Generator")
-st.image("pragyan_AI_WhatsApp Image 2026-02-22 at 6.16.39 PM (1).jpeg")
+st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZNDZkYgLrJIQ3CzrHJrMSJMForq0CfWfQQez9nquOtQMY4l8idWhNzUZYT59ojIbLwM9d3yjoYITzxBQV3_dAxSK5CAbAMLoj4XuKmbXg&s=10")
  #Get GROQ API Key
 client = Groq(api_key=st.secrets["GROQ_API_KEY"])
 
