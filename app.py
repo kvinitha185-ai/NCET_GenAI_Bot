@@ -1,4 +1,4 @@
-import.streamlit as st
+import streamlit as st
 from groq import Groq
 
 st.set_page_config("pragyanAI Content Generator", layout="wide")
